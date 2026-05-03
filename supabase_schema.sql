@@ -269,6 +269,9 @@ CREATE TABLE IF NOT EXISTS public.audit_logs (
 -- Enable RLS on audit_logs
 ALTER TABLE public.audit_logs ENABLE ROW LEVEL SECURITY;
 
+-- Clean up old policies before creating new ones
+DROP POLICY IF EXISTS "Mentors can read audit logs" ON public.audit_logs;
+
 -- Only mentors can read audit logs
 CREATE POLICY "Mentors can read audit logs" ON public.audit_logs 
 FOR SELECT TO authenticated USING (
