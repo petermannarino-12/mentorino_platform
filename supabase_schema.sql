@@ -326,7 +326,7 @@ CREATE TRIGGER audit_bookings
 -- ==============================================================================
 -- 11. SEED DATA - Add Mentor Email (uncomment and run once)
 -- ==============================================================================
--- INSERT INTO public.admin_emails (email, role) VALUES ('nameisnaresh.m@gmail.com', 'mentor');
+-- INSERT INTO public.admin_emails (email, role) VALUES ('petermannario12@gmail.com', 'mentor');
 
 -- ==============================================================================
 -- SECURITY CHECKLIST
